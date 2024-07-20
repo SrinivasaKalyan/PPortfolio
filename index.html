@@ -197,6 +197,53 @@
   .ftco-footer-social li:hover .name-instagram {
 	background-color: transparent; /* Remove background color */
   }
+
+ .hover-text {
+	font-size: 20px;
+	transition: color 0.3s ease, font-size 0.3s ease;
+}
+.hover-text:hover {
+	color: #ffbd39; /* Change the color on hover */
+	font-size: 110px; /* Change the size on hover */
+}
+
+.popup {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	left: 0%;
+	margin-left: -60px;
+	bottom: 125%;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 16px;
+	color: #333;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+	visibility: hidden;
+	width: 220px;
+	background-color: #333;
+	color:springgreen;
+	text-align: center;
+	border-radius: 12px;
+	padding: 12px;
+	position:absolute;
+	z-index: 1;
+	left: 50%;
+	margin-left: -150px;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 14px;
+	pointer-events: none; /* Make the popup ignore mouse events */
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+	visibility: visible;
+	opacity: 1;
+}
+
 </style>
 
 
@@ -206,7 +253,10 @@
 	  
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html">𝐊𝐚𝐥𝐲𝐚𝐧 𝐊𝐚𝐧𝐜𝐡𝐮𝐦𝐚𝐫𝐭𝐡𝐢</a>
+	     <div class="popup" onmousemove="movePopup(event)" onmouseover="showPopup()" onmouseout="hidePopup()">
+				<a class="navbar-brand" href="https://srinivasakalyan.github.io/" style="font-family:'Rock Salt', cursive;">Kalyan Kanchumarthi</a>
+				<span class="popuptext" id="myPopup">Hello Folks It's me!</span>
+			</div>
 	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
@@ -364,8 +414,8 @@
 						<div class="row justify-content-start pb-3">
 							<div class="col-md-12 heading-section ftco-animate">
 								
-								<h1 class="big" >About Me</h1>
-								<h2 class="ml-2">About Me</h2>
+								<h1 class="big big-2" >About Me</h1>
+								<h2 class="mb-4 hover-text">About Me</h2>
 								
 								<p class ="m-2">
 									I have a background in data science and analytics, specializing in Python backend development with FastAPI. Holding a B.Sc. in Data Science from Aditya Degree College, I've led projects including a sophisticated voice assistant with advanced NLP and a sentiment analysis app for evaluating lecturer performance. Proficient in Python, SQL, and tools like Tableau, I deliver insights and drive business growth through innovative solutions.</p>
@@ -406,7 +456,7 @@
     		<div class="row justify-content-center pb-5">
           <div class="col-md-10 heading-section text-center ftco-animate">
           	<h1 class="big big-2">Resume</h1>
-            <h2 class="mb-4">Resume</h2>
+            <h2 class="mb-4 hover-text">Resume</h2>
             <p>Hey there! I'm a developer who loves turning caffeine into code and finding insights in data that others might miss. But don't peg me as just a tech nerd! I’m socially savvy and love a good laugh with the team. Whether it's brainstorming brilliant ideas or just cracking a joke to lighten the mood, I’m all in. If you’re looking for someone who’s both smart and fun, I’m your person!</p>
           </div>
         </div>
@@ -527,8 +577,8 @@
       <div class="container">
         <div class="row justify-content-center mb-5 pb-5">
           <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Projects</h1>
-            <h2 class="mb-4">Projects</h2>
+               <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4 hover-text">Projects</h2>
             <p>"Below are some of my notable projects, showcasing my expertise in data science, analytics, and backend development using technologies like FastAPI,MongoDB and various Python libraries."</p>
           </div>
          
@@ -657,12 +707,26 @@
     <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
       <div class="container">
       	<div class="row justify-content-center mb-5 pb-3">
-			
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Contact</h1>
-            <h2 class="mb-4">Contact Me</h2>
-            <p >Below are the details to reach out to me!</p>
-          </div>
+			<div class="col-md-9 heading-section text-center ftco-animate">
+			  <h1 class="big big-2">Contact Me</h1>
+			  <h2 class="mb-4 hover-text">Contact Me</h2>
+			  <div class="row">
+				<div class="col-md-3" style="text-align: right;">
+					<img src="images/contactme.png" alt="Small Image" style="width: 100%; float: right;">
+				</div>
+				  <div class="col-md-9" style="text-align: left;">
+					<p></p>
+					<p></p>
+					  <p>Want to chat? Whether it's email, phone, or a good old-<br>
+						fashioned message in a bottle, 
+						I'm all ears! Let's connect <br>
+						and make things happen.</p>
+				  </div>
+				  
+				  
+			  </div>
+			</div>
+		  </div>
 		  
 
         <div class="row d-flex contact-info mb-5">
@@ -812,6 +876,23 @@
   <script src="js/scrollax.min.js"></script>
   
   <script src="js/main.js"></script>
+<script> function showPopup() {
+	var popup = document.getElementById("myPopup");
+	popup.classList.add("show");
+}
+
+// Hide the popup
+function hidePopup() {
+	var popup = document.getElementById("myPopup");
+	popup.classList.remove("show");
+}
+
+// Move the popup with the mouse
+function movePopup(event) {
+	var popup = document.getElementById("myPopup");
+	popup.style.left = event.pageX + 10 + 'px'; // Offset to avoid covering the cursor
+	popup.style.top = event.pageY + 10 + 'px';  // Offset to avoid covering the cursor
+}</script>
     
   </body>
 </html>

@@ -114,6 +114,89 @@
     margin-right: 10px; /* Adjust the value as needed */
 }
 
+	
+.color-danger {
+	color: #e3342f; /* Red color */
+  }
+
+.ftco-footer-social {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  .ftco-footer-social li {
+	margin: 0 10px;
+	position: relative;
+  }
+  .ftco-footer-social li a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	color: inherit;
+	width: 40px; /* Initial icon size */
+	height: 40px;
+	border-radius: 50%;
+	background-color: #ddd; /* Default icon background color */
+	transition: width 0.5s, background-color 0.5s;
+	position: relative;
+	overflow: hidden;
+	white-space: nowrap;
+  }
+  
+  .ftco-footer-social li .icon {
+	display: inline-block;
+	font-size: 20px; /* Adjust icon size */
+	transition: transform 0.5s;
+	margin-right: 10px; /* Space between icon and text */
+  }
+  .ftco-footer-social li .icon.linkedin {
+	color: #0e76a8;
+  }
+  .ftco-footer-social li .icon.github {
+	color: #333;
+  }
+  .ftco-footer-social li .icon.instagram {
+	color: #e4405f;
+  }
+  .ftco-footer-social li .name {
+	display: inline-block;
+	margin-left: 0px;
+	opacity: 0;
+	transition: opacity 0.5s;
+	font-size: 16px; /* Show the text */
+  }
+  .ftco-footer-social li .name-linkedin {
+	color: #0e76a8; /* LinkedIn blue */
+  }
+  .ftco-footer-social li .name-github {
+	color: #333; /* GitHub black */
+  }
+  .ftco-footer-social li .name-instagram {
+	color: #e4405f; /* Instagram gradient */
+  }
+  .ftco-footer-social li:hover a {
+	width: 100px; /* Expand to fit content */
+	padding: 0 10px; /* Add some padding */
+	border-radius: 100px; /* Maintain circular shape with expanded width */
+  }
+  .ftco-footer-social li:hover .icon {
+	transform: translateY(30px); /* Keep icon in place */
+  }
+  .ftco-footer-social li:hover .name {
+	opacity: 1;
+  }
+  .ftco-footer-social li:hover .name-linkedin {
+	background-color: transparent; /* Remove background color */
+  }
+  .ftco-footer-social li:hover .name-github {
+	background-color: transparent; /* Remove background color */
+  }
+  .ftco-footer-social li:hover .name-instagram {
+	background-color: transparent; /* Remove background color */
+  }
 </style>
 
 
@@ -645,12 +728,33 @@
    </div>
  </section>
  <br>
-					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+<!-- 					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
 					  <li class="ftco-animate normal-txt">Find me on  </li>
 					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/kalyan-kanchumarthi-a6320a235/" target="_blank"><span class="icon-linkedin"></span></a></li>  
 					  <li class="ftco-animate"><a href="https://github.com/SrinivasaKalyan" target="_blank"><span class="icon-github"></span></a></li>
 				      <li class="ftco-animate"><a href="https://www.instagram.com/kalyan_kanchumarthi/" target="_blank"><span class="icon-instagram"></span></a></li>
-					</ul>
+					</ul> -->
+		<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+						<li class="ftco-animate" style="color: #ccc;">Find me on</li>
+						<li class="ftco-animate">
+						  <a href="https://www.linkedin.com/in/kalyan-kanchumarthi-a6320a235/" target="_blank">
+							<span class="icon linkedin icon-linkedin"></span>
+							<span class="name name-linkedin">LinkedIn</span>
+						  </a>
+						</li>  
+						<li class="ftco-animate">
+						  <a href="https://github.com/SrinivasaKalyan" target="_blank">
+							<span class="icon github icon-github"></span>
+							<span class="name name-github">GitHub</span>
+						  </a>
+						</li>
+						<li class="ftco-animate">
+						  <a href="https://www.instagram.com/kalyan_kanchumarthi/" target="_blank">
+							<span class="icon instagram icon-instagram"></span>
+							<span class="name name-instagram">Instagram</span>
+						  </a>
+						</li>
+					  </ul>
 				<br>
 
 
